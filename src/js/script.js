@@ -35,3 +35,30 @@ atv2Checar.addEventListener('click', (e)=>{
 });
 
 // Atividade 3
+
+
+// Atividade 4
+const atividades = document.getElementById('atividades');
+
+const fatorial = (atv3Valor1) => {
+        let resultado = 1;
+        for(let i = 2; i <= atv3Valor1; i++){
+            resultado *= i;
+        }
+        return resultado;
+    }
+
+atividades.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    const elemento = e.target;
+
+    const lista = elemento.classList;
+    
+    if(lista.contains('atv3-checar')){
+        const valor = document.querySelector('.atv3Valor1');
+        const fator = fatorial(valor.value);
+
+        alert(fator);
+    }
+})
